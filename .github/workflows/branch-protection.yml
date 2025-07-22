@@ -1,0 +1,30 @@
+name: Branch Protection
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  protect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Validate HTML
+        uses: anishathalye/proof-html@v1
+        with:
+          directory: .
+
+      - name: Check Links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
+          check-modified-files-only: 'yes'
+
+      - name: Check JavaScript
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npx eslint .

@@ -1,0 +1,33 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lakshman Thangavel",
+    "url": "https://lakshmanajith.github.io/portfolio/",
+    "sameAs": [
+        "https://www.linkedin.com/in/lakshman2003",
+        "https://github.com/lakshmanajith"
+    ],
+    "jobTitle": "Full Stack Web Developer",
+    "worksFor": {
+        "@type": "Organization",
+        "name": "Independent Developer"
+    },
+    "description": "Full Stack Web Developer specializing in creating impactful web solutions and creative digital experiences",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rasipuram",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "India"
+    },
+    "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Kangeyam Institute of Technology"
+    },
+    "knowsAbout": [
+        "Web Development",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Full Stack Development"
+    ]
+}

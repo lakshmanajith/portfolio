@@ -1,3 +1,18 @@
+# LakshmanPortfolio Website
 User-agent: *
 Allow: /
-Sitemap: https://lakshman2003.github.io/portfolio/sitemap.xml
+Disallow: /private/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+
+# Sitemap location
+Sitemap: https://lakshmanajith.github.io/portfolio/sitemap.xml

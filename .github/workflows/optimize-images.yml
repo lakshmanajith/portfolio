@@ -1,0 +1,29 @@
+name: Optimize Images
+
+on:
+  push:
+    paths:
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
+  workflow_dispatch:
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Optimize Images
+        uses: calibreapp/image-actions@main
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          compressOnly: true
+          
+      - name: Commit optimized images
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Automatically optimized images"
+          file_pattern: "*.{jpg,jpeg,png,webp}"
