@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshman Thangavel - Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Lakshman Thangavel, a passionate Full-Stack Web Developer creating impactful solutions with clean code and creative thinking.">
+    <meta name="keywords" content="web developer, portfolio, Lakshman Thangavel, full stack developer, JavaScript, HTML, CSS">
+    <meta name="author" content="Lakshman Thangavel">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lakshman2003.github.io/portfolio/">
+    <meta property="og:title" content="Lakshman Thangavel - Web Developer Portfolio">
+    <meta property="og:description" content="Portfolio of Lakshman Thangavel, a passionate Full-Stack Web Developer creating impactful solutions.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lakshman2003.github.io/portfolio/">
+    <meta property="twitter:title" content="Lakshman Thangavel - Web Developer Portfolio">
+    <meta property="twitter:description" content="Portfolio of Lakshman Thangavel, a passionate Full-Stack Web Developer creating impactful solutions.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("JNRkUZ3msDIQSn6kz"); // Replace with your actual EmailJS public key
+        })();
+    </script>
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">LakshmanPortfolio</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+                <div class="menu-container">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <ul class="menu-list">
+                            <li class="menu-section">
+                                <button class="section-header">
+                                    <h3>Personal Information</h3>
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <ul class="section-content">
+                                    <li>Name: Lakshman</li>
+                                    <li>Email: lakshmanthangavel.2003@gmail.com</li>
+                                    <li>Location: Rasipuram TK, Namakkal DT, Tamil Nadu</li>
+                                </ul>
+                            </li>
+                            <li class="menu-section">
+                                <button class="section-header">
+                                    <h3>Education</h3>
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <ul class="section-content">
+                                    <li>Degree: B.E in Electrical and Electronics Engineering</li>
+                                    <li>University: Kangeyam Institute of Technology</li>
+                                    <li>Year: 2021-2025</li>
+                                </ul>
+                            </li>
+                            <li class="menu-section">
+                                <button class="section-header">
+                                    <h3>Certifications</h3>
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <ul class="section-content">
+                                    <li>Java Programming for Beginners</li>
+                                    <li>Introduction to prompt engineering</li>
+                                    <li>Senior English Typewriting</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        </nav>
+        <div class="menu-sections" id="menuSections">
+            <button onclick="showModal('personalInfoModal')" class="section-button">
+                <i class="fas fa-user"></i>
+                <span>Personal Information</span>
+            </button>
+            <button onclick="showModal('educationModal')" class="section-button">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Education</span>
+            </button>
+            <button onclick="showModal('achievementsModal')" class="section-button">
+                <i class="fas fa-trophy"></i>
+                <span>Achievements</span>
+            </button>
+        </div>
+        <!-- Continue with the hero-content div -->
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <div class="profile-img fade-in">
+                <img src="./Profile image.jpg" alt="Lakshman Thangavel" />
+            </div>
+            <h1 class="fade-in">Hi, I'm <span class="highlight">Lakshman Thangavel</span></h1>
+            <p class="fade-in delay-1">A passionate <span class="highlight">Web Developer</span> crafting beautiful experiences.</p>
+            <div class="social-links fade-in delay-1">
+                <button class="social-icon" onclick="showModal('emailModal')" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </button>
+                <button class="social-icon" onclick="showModal('linkedinModal')" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </button>
+                <button class="social-icon" onclick="showModal('whatsappModal')" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+            </div>
+
+            <!-- Social Link Modals -->
+            <div id="emailModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('emailModal')">&times;</span>
+                    <h3>Email Address</h3>
+                    <p class="social-url">lakshmanthangavel.2003@gmail.com</p>
+                    <div class="modal-buttons">
+                        <button onclick="copyToClipboard('lakshmanthangavel.2003@gmail.com')" class="copy-btn">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <a href="mailto:lakshmanthangavel.2003@gmail.com" class="visit-btn">
+                            <i class="fas fa-envelope"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="linkedinModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('linkedinModal')">&times;</span>
+                    <h3>LinkedIn Profile</h3>
+                    <p class="social-url">https://www.linkedin.com/in/lakshman2003</p>
+                    <div class="modal-buttons">
+                        <button onclick="copyToClipboard('https://www.linkedin.com/in/lakshman2003')" class="copy-btn">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <a href="https://www.linkedin.com/in/lakshman2003" target="_blank" class="visit-btn">
+                            <i class="fas fa-external-link-alt"></i> Visit Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="whatsappModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('whatsappModal')">&times;</span>
+                    <h3>WhatsApp Contact</h3>
+                    <p class="social-url">+91 9360786723</p>
+                    <div class="modal-buttons">
+                        <button onclick="copyToClipboard('+919360786723')" class="copy-btn">
+                            <i class="fas fa-copy"></i> Copy Number
+                        </button>
+                        <a href="https://wa.me/919360786723" target="_blank" class="visit-btn">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#projects" class="cta-btn fade-in delay-2">View My Work</a>
+        </div>
+    </header>
+    <section id="about" class="section about">
+        <div class="container fade-in-up">
+            <h2>About Me</h2>
+            <p>Aspiring Full-Stack Web Developer turning ideas into smart, impactful solutions with clean code and creative thinking.</p>
+        </div>
+    </section>
+    <section id="projects" class="section projects">
+        <div class="container fade-in-up">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="resume app ATS.jpg" alt="AI Resume Builder">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered Resume Builder</h3>
+                        <p>A smart web app where users can enter their details and get an ATS-friendly, auto-formatted resume. It uses AI to suggest content, auto-correct grammar, and tailor resumes to specific job roles or companies using keyword matching</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="ECart1.jpg" alt="EcoCart Shopping">
+                    </div>
+                    <div class="project-content">
+                        <h3>EcoCart- Smart Shopping with Sustainability Insights</h3>
+                        <p>An e-commerce web app that not only allows users to shop but also shows eco-impact scores of each product (like carbon footprint, sustainability rating). Promotes green consumer behaviour.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="studysync.jpg" alt="StudySync Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>StudySync-Colloborative Learning Hub</h3>
+                        <p>A platform for students to create, share, and colloborate on study notes, flashcards, and quizzes. Powered by real-time syncing, AI summarizer, and peer learning features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feedback" class="section feedback">
+        <div class="container fade-in-up">
+            <h2>Feedback</h2>
+            <div class="feedback-container">
+                <div class="feedback-list" id="feedbackList">
+                    <!-- Feedback items will be loaded here -->
+                </div>
+                <form class="feedback-form" id="feedbackForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating</label>
+                        <div class="rating-container">
+                            <div class="stars" id="ratingStars">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="rating" name="rating" required value="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback">Your Feedback</label>
+                        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                        <div class="error-message" id="feedback-error"></div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Submit Feedback</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 lakshmanthangavel. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
